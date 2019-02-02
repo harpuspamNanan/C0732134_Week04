@@ -38,14 +38,15 @@ namespace C0732134_Week04
 
             Maple.nextVillage = Toronto;
             Toronto.nextVillage = Ajax;
-            Ajax.nextVillage = Maple;
+            Ajax.nextVillage = null;
         }
 
         public void Travel()
         {
-            Village currentVillage = Toronto;
-            while (!currentVillage.isAstrilde)
+            Village currentVillage = Maple;
+            while (currentVillage.nextVillage != null)
             {
+                Console.WriteLine("I am in : " + currentVillage.villageName);
                 if (currentVillage.isAstrilde)
                     Console.WriteLine("Yay! Hugi found Astrilda in "+currentVillage.villageName+" XOXO");
                 else
