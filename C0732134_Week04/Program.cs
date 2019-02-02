@@ -26,6 +26,8 @@ namespace C0732134_Week04
     {
         Village Toronto, Ajax, Maple;
 
+        public Village CurrentVillage { get; private set; }
+
         public void run()
         {
             Maple = new Village();
@@ -43,17 +45,14 @@ namespace C0732134_Week04
 
         public void Travel()
         {
-            Village currentVillage = Maple;
-            while (currentVillage.nextVillage != null)
+            CurrentVillage = Toronto;
+            while (true)
             {
-                Console.WriteLine("I am in : " + currentVillage.villageName);
-                if (currentVillage.isAstrilde)
-                    Console.WriteLine("Yay! Hugi found Astrilda in "+currentVillage.villageName+" XOXO");
+                if (CurrentVillage.isAstrilde)
+                    Console.WriteLine("Astrilde is in : " + CurrentVillage.villageName);
                 else
-                    currentVillage = currentVillage.nextVillage;
-                // Village NextVillage = currentVillage.NextVillage;
+                    CurrentVillage = CurrentVillage.nextVillage;
             }
-
         }
 
 
