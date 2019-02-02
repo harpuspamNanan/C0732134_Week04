@@ -7,6 +7,10 @@ namespace C0732134_Week04
         static void Main(string[] args)
         {
             Countryside c = new Countryside();
+            c.run();
+            c.Travel();
+            //new Test().forTest();             // Anonymous Object Reference
+                Console.ReadLine();
         }
     }
 
@@ -29,12 +33,31 @@ namespace C0732134_Week04
             Toronto = new Village();
             Toronto.villageName = "Toronto";
             Ajax = new Village();
+            Ajax.isAstrilde = true;
             Ajax.villageName = "Ajax";
 
             Maple.nextVillage = Toronto;
             Toronto.nextVillage = Ajax;
             Ajax.nextVillage = Maple;
         }
+
+        public void Travel()
+        {
+            Village CurrentVillage = Toronto;
+            while (CurrentVillage.isAstrilde)
+            {
+                if (CurrentVillage.isAstrilde)
+                    Console.WriteLine("Yay! Hugi found Astrilda. XOXO");
+                else
+                    CurrentVillage = CurrentVillage.nextVillage;
+                // Village NextVillage = CurrentVillage.NextVillage;
+            }
+
+        }
     }
+
+
+
+    
 }
 
