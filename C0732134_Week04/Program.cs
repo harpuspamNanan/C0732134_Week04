@@ -49,7 +49,10 @@ namespace C0732134_Week04
             while (true)
             {
                 if (CurrentVillage.isAstrilde)
+                {
                     Console.WriteLine("Astrilde is in : " + CurrentVillage.villageName);
+                    Console.ReadLine();
+                }
                 else
                     CurrentVillage = CurrentVillage.nextVillage;
             }
