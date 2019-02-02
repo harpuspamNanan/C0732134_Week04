@@ -43,21 +43,23 @@ namespace C0732134_Week04
 
         public void Travel()
         {
-            Village CurrentVillage = Toronto;
-            while (CurrentVillage.isAstrilde)
+            Village currentVillage = Toronto;
+            while (!currentVillage.isAstrilde)
             {
-                if (CurrentVillage.isAstrilde)
-                    Console.WriteLine("Yay! Hugi found Astrilda. XOXO");
+                if (currentVillage.isAstrilde)
+                    Console.WriteLine("Yay! Hugi found Astrilda in "+currentVillage.villageName+" XOXO");
                 else
-                    CurrentVillage = CurrentVillage.nextVillage;
-                // Village NextVillage = CurrentVillage.NextVillage;
+                    currentVillage = currentVillage.nextVillage;
+                // Village NextVillage = currentVillage.NextVillage;
             }
 
         }
+
+
     }
 
 
 
-    
+
 }
 
