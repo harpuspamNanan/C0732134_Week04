@@ -33,7 +33,7 @@ namespace C0732134_Week04
             Maple = new Village();
             Maple.villageName = "Maple";
             Toronto = new Village();
-            Toronto.villageName = "Toronto";
+            Toronto.villageName = "Toronto"; 
             Ajax = new Village();
             Ajax.isAstrilde = true;
             Ajax.villageName = "Ajax";
